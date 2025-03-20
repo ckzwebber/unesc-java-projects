@@ -1,0 +1,14 @@
+import javax.swing.JOptionPane;
+
+public class Desafio {
+
+	public static void main(String[] args) {
+		
+		
+		int quantidadePacientes = Integer.parseInt(JOptionPane.showInputDialog("Quantos pacientes existem?"));
+		
+		int
+
+	}
+
+}

@@ -1,0 +1,19 @@
+import javax.swing.JOptionPane;
+
+public class Ex4 {
+
+	public static void main(String[] args) {
+		
+		int opcaoDeMes = Integer.parseInt(JOptionPane.showInputDialog("Digite um número de 1 a 12: "));
+
+		switch (opcaoDeMes) {
+		case 1:
+			JOptionPane.showMessageDialog(null, "1 - Mes de Janeiro");
+			break;
+
+		default:
+			break;
+		}
+	}
+
+}

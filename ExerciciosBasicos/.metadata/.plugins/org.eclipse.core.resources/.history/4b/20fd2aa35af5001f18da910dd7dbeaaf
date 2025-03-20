@@ -1,0 +1,17 @@
+import javax.swing.JOptionPane;
+
+public class Aquecimento {
+
+	public static void main(String[] args) {
+
+		double nota1 = Double.parseDouble(JOptionPane.showInputDialog("Digite a nota 1 do aluno:"));
+		double nota2 = Double.parseDouble(JOptionPane.showInputDialog("Digite a nota 2 do aluno:"));
+		double nota3 = Double.parseDouble(JOptionPane.showInputDialog("Digite a nota 3 do aluno:"));
+		double media = (nota1 + nota2 + nota3) / 3;
+
+		JOptionPane.showMessageDialog(null, "A media do aluno é: " + media + ".");
+		System.out.println();
+
+	}
+
+}

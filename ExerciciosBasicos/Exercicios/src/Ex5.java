@@ -1,0 +1,38 @@
+import javax.swing.JOptionPane;
+
+public class Ex5 {
+
+	public static void main(String[] args) {
+
+		double primeiroNumero = Double.parseDouble(JOptionPane.showInputDialog("Digite o primeiro número: "));
+		double segundoNumero = Double.parseDouble(JOptionPane.showInputDialog("Digite o segundo número: "));
+
+		int opcaoDeOperacao = Integer.parseInt(JOptionPane.showInputDialog("Escolha uma opção: \n1 - Soma \n2 - Subtração \n3- Multiplicação \n4- Divisão"));
+		
+		switch(opcaoDeOperacao)
+		{
+		case 1:
+			JOptionPane.showMessageDialog(null, "A soma dos números é: " + (primeiroNumero + segundoNumero));
+			break;
+			
+		case 2:
+			JOptionPane.showMessageDialog(null, "A subtração dos números é: " + (primeiroNumero - segundoNumero));
+			break;
+			
+		case 3:
+			JOptionPane.showMessageDialog(null, "A multiplicação dos números é: " + (primeiroNumero * segundoNumero));
+			break;
+			
+		case 4:
+			JOptionPane.showMessageDialog(null, "A divisão dos números é: " + (primeiroNumero / segundoNumero));
+			break;
+		
+		default:
+			JOptionPane.showMessageDialog(null, "Operação inválida!");
+			break;
+		}
+			
+
+	}
+
+}

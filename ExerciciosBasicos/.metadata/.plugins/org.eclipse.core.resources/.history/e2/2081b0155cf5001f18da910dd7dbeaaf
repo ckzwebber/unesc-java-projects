@@ -1,0 +1,20 @@
+import javax.swing.JOptionPane;
+
+public class Ex1 {
+
+	public static void main(String[] args) {
+
+		double nota1 = Double.parseDouble(JOptionPane.showInputDialog("Digite a nota 1 do aluno:"));
+		double pesoDaNota1 = Double.parseDouble(JOptionPane.showInputDialog("Digite o peso da nota 1:"));
+		double nota2 = Double.parseDouble(JOptionPane.showInputDialog("Digite a nota 2 do aluno:"));
+		double pesoDaNota2 = Double.parseDouble(JOptionPane.showInputDialog("Digite o peso da nota 2:"));
+		double nota3 = Double.parseDouble(JOptionPane.showInputDialog("Digite a nota 3 do aluno:"));
+		double pesoDaNota3 = Double.parseDouble(JOptionPane.showInputDialog("Digite o peso da nota 3:"));
+		
+		double media = (nota1 * pesoDaNota1) + (nota2 * pesoDaNota2) + (nota3 * pesoDaNota3) / (pesoDaNota1 + pesoDaNota2 + pesoDaNota3);
+
+		JOptionPane.showMessageDialog(null, "A media ponderada do aluno é: " + media + ".");
+
+	}
+
+}

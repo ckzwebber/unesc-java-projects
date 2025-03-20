@@ -1,0 +1,35 @@
+import javax.swing.JOptionPane;
+
+public class Desafio {
+
+	public static void main(String[] args) {
+		
+		String nome, sexo;
+		int idade;
+		int somaIdadeHomens = 0;
+		int quantidadeHomens = 0;
+		int quantidadePacientesIdades18e25 = 0;
+		int quantidadePacientes = Integer.parseInt(JOptionPane.showInputDialog("Quantos pacientes existem?"));
+		
+		for(int i = 0; i < quantidadePacientes; i++)
+		{
+			nome = JOptionPane.showInputDialog("Digite o nome do paciente: ");
+			idade = Integer.parseInt(JOptionPane.showInputDialog("Digite a idade do paciente: "));
+			
+			if(idade > 18 && idade < 25)
+			{
+				quantidadePacientesIdades18e25++;
+			}
+			
+			sexo = JOptionPane.showInputDialog("Digite o sexo (M ou F):");
+			
+			if(sexo == "M")
+			{
+				quantidadeHomens++;
+				somaIdadeHomens += idade;
+				
+			}
+		}
+	}
+
+}

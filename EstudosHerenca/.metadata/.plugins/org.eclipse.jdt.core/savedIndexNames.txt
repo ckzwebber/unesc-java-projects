@@ -1,0 +1,4 @@
+INDEX VERSION 1.134+/home/webber/Documents/Facul/POO/Aula-3/.metadata/.plugins/org.eclipse.jdt.core
+4240364777.index
+1865797976.index
+970156308.index

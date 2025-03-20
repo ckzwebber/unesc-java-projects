@@ -1,0 +1,11 @@
+import javax.swing.JOptionPane;
+
+public class Ex2 {
+
+	public static void main(String[] args) {
+		
+		double salarioBase = Double.parseDouble(JOptionPane.showInputDialog("Digite o salário base de um funcionário:"));
+
+	}
+
+}

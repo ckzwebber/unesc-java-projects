@@ -1,0 +1,62 @@
+import javax.swing.JOptionPane;
+
+public class Desafio {
+
+	public static void main(String[] args) {
+
+		String nome, sexo;
+		String homemMaisVelho;
+		String mulherMaisBaixa;
+		double idadeMaisVelha = 0;
+		double alturaMaisBaixa = 9999;
+		double altura;
+		double peso;
+		int idade;
+		int somaIdadeHomens = 0;
+		int quantidadeMulheresComAlturaEPeso = 0;
+		int quantidadeHomens = 0;
+		int quantidadePacientesIdades18e25 = 0;
+		int quantidadePacientes = Integer.parseInt(JOptionPane.showInputDialog("Quantos pacientes existem?"));
+
+		for (int i = 0; i < quantidadePacientes; i++) {
+			nome = JOptionPane.showInputDialog("Digite o nome do paciente: ");
+			idade = Integer.parseInt(JOptionPane.showInputDialog("Digite a idade do paciente: "));
+
+			if (idade > 18 && idade < 25) {
+				quantidadePacientesIdades18e25++;
+			}
+
+			sexo = JOptionPane.showInputDialog("Digite o sexo (M ou F):");
+			altura = Double.parseDouble(JOptionPane.showInputDialog("Digite a altura: "));
+			peso = Double.parseDouble(JOptionPane.showInputDialog("Digite o peso: "));
+				
+
+			if (sexo == "M") {
+				quantidadeHomens++;
+				somaIdadeHomens += idade;
+				if (idade > idadeMaisVelha) {
+					homemMaisVelho = nome;
+				}
+			} else if (sexo == "F") {
+				if (altura < alturaMaisBaixa) {
+					mulherMaisBaixa = nome;
+				}
+
+				if (altura > 1.60 && altura < 1.70 && peso > 70) {
+					quantidadeMulheresComAlturaEPeso++;
+				}
+			}
+		}
+		
+		double mediaIdadeHomens = somaIdadeHomens / quantidadeHomens;
+		
+		JOptionPane.showMessageDialog(null, "Quantidade de pacientes: " + quantidadePacientes);
+		JOptionPane.showMessageDialog(null, "Pacientes com idade entre 18 e 25: " + quantidadePacientesIdades18e25);
+		JOptionPane.showMessageDialog(null, "Media da idade dos homens: " + mediaIdadeHomens);
+		JOptionPane.showMessageDialog(null, "Quantidade de mulheres com altura entre 1,60 e 1,70 e  peso acima de 70kg: " + quantidadeMulheresComAlturaEPeso);
+		JOptionPane.showMessageDialog(null, "Paciente homem mais velho: " + homemMaisVelho);
+		JOptionPane.showMessageDialog(null, "Nome da mulher mais baixa: " + mulherMaisBaixa);
+
+	}
+
+}
